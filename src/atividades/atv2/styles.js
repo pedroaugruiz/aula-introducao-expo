@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         borderColor: 'deepskyblue',
         marginTop: 10,
         marginBottom: 10,
-        padding: 8,
+        padding: 18,
         width: '100%',
         height: 80,
         textAlign: 'center',
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     imagem: {
         // height: rfPercentage(10),
         //width: rfPercentage(28),
-        width: '80%',
-        resizeMode: 'contain',
+        width: '20%',
+        resizeMode: 'center',
     },
 });
 

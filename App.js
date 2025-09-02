@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 import Exemplo01 from './src/exemplos/ex01';
 
 import Exemplo02 from './src/exemplos/ex02';
 
-import Atividade2 from './src/atividades/ex02 copy';
+import Atividade2 from './src/atividades/atv2';
 
 export default function App() {
   return (

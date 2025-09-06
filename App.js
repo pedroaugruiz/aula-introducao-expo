@@ -1,8 +1,12 @@
 import { StyleSheet, Text, View, Image } from 'react-native';
 
+// Exemplos
+
 import Exemplo01 from './src/exemplos/ex01';
 
 import Exemplo02 from './src/exemplos/ex02';
+
+// Atividades
 
 import Atividade2 from './src/atividades/atv2';
 

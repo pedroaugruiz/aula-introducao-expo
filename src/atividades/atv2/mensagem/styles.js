@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#07f',
         borderWidth: RFPercentage(0.6),
         width: '90%',
+        height: RFPercentage(15),
         padding: 8,
         alignItems: 'left',
         borderRadius: 20,
@@ -21,7 +22,6 @@ const styles = StyleSheet.create({
         fontSize: RFPercentage(3),
         color: '#121212',
         fontWeight: 'bold',
-        borderWidth: 2,
         marginBottom: RFPercentage(1),
     },
     texto: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     imagem: {
         // height: rfPercentage(10),
         //width: rfPercentage(28),
-        width: '20%',
+        width: '25%',
         resizeMode: 'center',
         flexDirection: 'row-reverse',
     },

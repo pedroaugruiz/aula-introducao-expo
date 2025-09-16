@@ -8,6 +8,8 @@ import Exemplo02 from './src/exemplos/ex02';
 
 import Exemplo03 from './src/exemplos/ex03';
 
+import Exemplo04 from './src/exemplos/ex04';
+
 // Atividades
 
 import Atividade2 from './src/atividades/atv2';
@@ -15,7 +17,7 @@ import Atividade2 from './src/atividades/atv2';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo03 />
+      <Exemplo04 />
     </View>
   );
 }

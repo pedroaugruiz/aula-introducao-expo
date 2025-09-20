@@ -14,10 +14,14 @@ import Exemplo04 from './src/exemplos/ex04';
 
 import Atividade2 from './src/atividades/atv2';
 
+import Atividade3 from './src/atividades/atv3';
+
+import Atividade4 from './src/atividades/atv4';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo04 />
+      <Atividade4 />
     </View>
   );
 }

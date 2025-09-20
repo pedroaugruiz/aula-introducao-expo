@@ -3,10 +3,10 @@ import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import styles from "./styles";
 import { useState } from "react";
 
-function Exemplo4 () {
+function Atividade4 () {
 
     const [texto, setTexto] = useState('');
-    const [txt2, setTxt2] = useState('Valor Inicial');
+    const [txt2, setTxt2] = useState('');
     const [mensagem, setMensagem] = useState('');
 
     function handleExibeMensagem(){
@@ -16,25 +16,23 @@ function Exemplo4 () {
 
     return(
         <View style={styles.container}>
-            <Text style={styles.titulo}>Exemplo 4</Text>
-
-            <Text style={styles.txt}>{texto}</Text>
-            
-            <TextInput
-                placeholder='texto de fundo'
-                keyboardType='visible-password'
-                maxLength={40}
-                value={texto}
-                onChangeText={setTexto}
-                style={styles.input}
-            />
+            <Text style={styles.titulo}>Atividade 4</Text>
 
             <Text style={styles.txt}>{mensagem}</Text>
             
             <TextInput
+                placeholder='Nome'
+                keyboardType='ascii-capable'
+                onChangeText={setTexto}
+                style={styles.input}
+            />
+
+            <Text style={styles.txt}>{texto}</Text>
+            
+            <TextInput
                 value={txt2}
                 onChangeText={setTxt2}
-                placeholder='digite sua mensagem'
+                placeholder='Sobrenome'
                 keyboardType='ascii-capable'
                 style={styles.input}
             />
@@ -48,4 +46,4 @@ function Exemplo4 () {
         </View>
     )
 }
-export default Exemplo4;
+export default Atividade4;

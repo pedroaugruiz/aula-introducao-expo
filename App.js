@@ -24,10 +24,12 @@ import Atividade4 from './src/atividades/atv4';
 
 import Atividade5 from './src/atividades/atv5';
 
+import Atividade6 from './src/atividades/atv06';
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo06 />
+      <Atividade6 />
     </View>
   );
 }

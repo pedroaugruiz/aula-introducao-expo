@@ -1,5 +1,5 @@
-import { StyleSheet } from "react-native";
-import { RFValue } from "react-native-responsive-fontsize";
+import { StyleSheet } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
     container: {
@@ -13,11 +13,7 @@ const styles = StyleSheet.create({
     },
     txtItem: {
         fontSize: RFValue(16),
-    },
-    lista: {
-        marginTop: RFValue(10),
-        width: '100%',
-    },
+    }
 });
 
 export default styles;

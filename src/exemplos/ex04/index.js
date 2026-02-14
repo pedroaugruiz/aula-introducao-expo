@@ -1,51 +1,55 @@
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
-import styles from "./styles";
-import { useState } from "react";
+import styles from './styles';
 
-function Exemplo4 () {
+export default function Exemplo04() {
 
     const [texto, setTexto] = useState('');
-    const [txt2, setTxt2] = useState('Valor Inicial');
-    const [mensagem, setMensagem] = useState('');
+    const [txt2, setTxt2] = useState('Valor inicial'); 
+    const [mensagem, setMensagem] = useState(''); 
 
-    function handleExibeMensagem(){
+    function handleExibeMensagem() {
         setMensagem(txt2);
         setTxt2('');
     }
 
-    return(
+    return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 4</Text>
 
             <Text style={styles.txt}>{texto}</Text>
-            
+
             <TextInput
-                placeholder='texto de fundo'
-                keyboardType='visible-password'
-                maxLength={40}
-                value={texto}
                 onChangeText={setTexto}
+                placeholder='texto de fundo'
+                keyboardType='ascii-capable'
+                // editable={false}
+                // multiline
+                // numberOfLines={4}
+                maxLength={7}
+                // secureTextEntry 
                 style={styles.input}
             />
 
             <Text style={styles.txt}>{mensagem}</Text>
-            
             <TextInput
-                value={txt2}
+                value={txt2} 
                 onChangeText={setTxt2}
                 placeholder='digite sua mensagem'
-                keyboardType='ascii-capable'
+                keyboardType='ascii-capable'                
                 style={styles.input}
             />
 
-            <TouchableOpacity
-            style={styles.botao}
-            onPress={() => handleExibeMensagem()}
+            <TouchableOpacity 
+                style={styles.botao} 
+                onPress={() => handleExibeMensagem()}
             >
-                <Text style={styles.txtBotao}>Exibir Texto</Text>
-            </TouchableOpacity>
+                <Text style={styles.txtBotao}>Exibir texto</Text>
+            </TouchableOpacity> 
+
         </View>
-    )
+    );
 }
-export default Exemplo4;
+
+

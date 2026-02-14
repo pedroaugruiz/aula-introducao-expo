@@ -1,37 +1,64 @@
-import { useState } from "react";
+import { useState } from 'react';
+import { View, Text, Button, Alert, TouchableOpacity } from 'react-native';
 
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import styles from './styles';
 
-import styles from "./styles";
+function Exemplo03() {
 
-function Exemplo3 () {
+    const [numero, setNumero] = useState(0);
 
-    const [numero, setNumero] = useState(10);
-
-    function handleIncrementar() {
+    function handleIncrementa() {
         setNumero(numero + 1);
-        // console.log(numero);
     }
 
-    return(
+    function handleExibeBotao() {
+        Alert.alert('Alerta', 'Alguém clicou no botão!');
+    }
+
+    const handleExibeBotao2 = () => {
+        Alert.alert(
+            'Alerta',
+            'Alguém clicou no botão!',
+            [
+                {
+                    text: 'Sim',
+                    onPress: () => Alert.alert('Mensagem', 'Clicou em sim'),
+                    style: 'default',
+                },
+                {
+                    text: 'Não',
+                    onPress: () => Alert.alert('Clicou em não'),
+                    style: 'default',
+                },
+                {
+                    text: 'Cancelar',
+                    onPress: () => Alert.alert('Clicou em cancelar'),
+                    style: 'default',
+                },
+            ]
+        );
+    }
+
+    return (
         <View style={styles.container}>
             <Text style={styles.titulo}>Exemplo 3</Text>
-            <Button 
-            onPress={() => {alert('Alguém tocou no botão!')}}
-            title="Alerta"
-            color="#7f7"
-            accessibilityLabel="Botão de alerta"
-            />
+            <Text style={styles.texto}>Variáveis e State</Text>
 
-            <Text style={styles.txt}>{numero}</Text>
+            <View style={styles.botaoAlert}>
+                <Button
+                    title='Não clique'
+                    color={'darkslategrey'}
+                    onPress={handleExibeBotao2}
+                />
+            </View>
 
-            <TouchableOpacity 
-            style={styles.botao}
-            onPress={() => handleIncrementar()}
-            >
-                <Text style={styles.txtbotao}>Incrementar número</Text>
+            <Text style={styles.valor}>{numero}</Text>
+            <TouchableOpacity style={styles.botao} onPress={handleIncrementa}>
+                <Text style={styles.txtBotao}>+1</Text>
             </TouchableOpacity>
+
         </View>
-    )
+    );
 }
-export default Exemplo3;
+
+export default Exemplo03;

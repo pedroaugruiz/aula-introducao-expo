@@ -3,7 +3,7 @@ import { View, Text, FlatList, Alert, Platform } from 'react-native';
 import uuid from 'react-native-uuid';
 
 import ItemLista from './itemLista';
-import AddItem from './addItem';
+// import AddItem from './addItem';
 
 import styles from './styles';
 
